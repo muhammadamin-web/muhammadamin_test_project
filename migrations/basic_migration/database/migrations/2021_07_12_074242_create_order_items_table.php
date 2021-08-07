@@ -15,11 +15,14 @@ class CreateOrderItemsTable extends Migration
     {
         Schema::create('order_items', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('order_details_id')->on('order_details');
-            $table->foreignId('product_id')->on('product');
+            $table->foreignId('order_details_id');
+            $table->foreignId('product_id');
             $table->integer('quantity');
             $table->timestamps();
         });
+        // if (Schema::hasTable('users')) {
+        //     // The "users" table exists...
+        // }
     }
 
     /**
