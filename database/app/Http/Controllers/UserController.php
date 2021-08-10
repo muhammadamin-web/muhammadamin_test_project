@@ -8,8 +8,8 @@ class UserController extends Controller
 {
     public function index()
     {
-        // $users = DB::table('users')->get();
-        // $user = DB::table('users')->where('name', 'Kaylie Stokes')->value('email');
+        $users = DB::table('users')->get();
+        $user = DB::table('users')->where('name', 'Kaylie Stokes')->value('email');
         
 
 
