@@ -16,7 +16,7 @@
     <div class="news">
         <a href="{{$post->link_url}}">
             <div class="post">
-                <img class="post_image" src="{{ secure_asset('storage/app/public/news/$post->img.jpg')}}">
+                <img class="post_image" src="{{ asset('storage/news/' . $post->img . '.jpg') }}">
                 <div class="created_data">
                     <span class="hour">{{$post->time_hour}}</span>/<span class="day/month/year">{{$post->date_day}}</span>
 
